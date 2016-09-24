@@ -1,6 +1,10 @@
 " Nice theme
 colorscheme summerfruit256
-set guifont=Lucida_Console:h9:cANSI
+if has("win32")
+    set guifont=Lucida_Console:h9:cANSI
+elseif has("unix")
+    set guifont=Cousine
+endif
 
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar

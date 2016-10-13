@@ -35,10 +35,15 @@ set expandtab
 
 let mapleader=","
 
-map <leader>j o<esc>
-map <leader>k O<esc>
+map <leader>o o<esc>
+map <leader>O O<esc>
+
 map <leader>v :e $MYVIMRC<CR>
 map <leader>n :nohlsearch<CR>
+
+map <leader>j 10j
+map <leader>k 10k
+
 
 noremap <C-c> <esc>
 

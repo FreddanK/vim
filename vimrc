@@ -14,7 +14,9 @@ endif
 " Relative numbers so that it is easy to know how far to jump with navigation
 " commands.
 set relativenumber
+set number
 
+set path+=**
 set wildmenu
 
 set showcmd
@@ -33,6 +35,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+set foldmethod=indent
+
 let mapleader=","
 
 map <leader>o o<esc>
@@ -45,7 +49,7 @@ map <leader>j 10j
 map <leader>k 10k
 
 
-noremap <C-c> <esc>
+map <C-c> <esc>
 
 execute pathogen#infect()
 " set runtimepath^=~/.vim/bundle/ctrlp.vim

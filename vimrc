@@ -48,6 +48,7 @@ map <leader>n :nohlsearch<CR>
 map <leader>j 10j
 map <leader>k 10k
 
+map <leader>z zR
 
 map <C-c> <esc>
 

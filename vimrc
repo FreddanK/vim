@@ -1,3 +1,9 @@
+"
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+"
+set nocompatible
+
 " Nice theme
 colorscheme summerfruit256
 if has("win32")
@@ -31,6 +37,7 @@ set t_vb=
 
 set cmdheight=2
 
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -56,11 +63,16 @@ execute pathogen#infect()
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+nnoremap <leader>. :CtrlPTag<cr>
 
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-"
-set nocompatible
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start

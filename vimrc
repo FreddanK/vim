@@ -56,8 +56,11 @@ map <leader>j 10j
 map <leader>k 10k
 
 map <leader>z zR
+map <leader>c :cd %:p:h<CR>
 
 map <C-c> <esc>
+
+nnoremap V <C-q>
 
 execute pathogen#infect()
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -68,11 +71,12 @@ nnoremap <leader>. :CtrlPTag<cr>
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+" 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_check_on_w = 0
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start

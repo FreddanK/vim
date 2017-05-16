@@ -42,8 +42,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-set foldmethod=indent
-
 let mapleader=","
 
 map <leader>o o<esc>

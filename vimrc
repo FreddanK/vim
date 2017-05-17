@@ -4,8 +4,10 @@
 "
 set nocompatible
 
-" Nice theme
-colorscheme summerfruit256
+if has("gui_running")
+    colorscheme summerfruit256
+endif 
+
 if has("win32")
     set guifont=Lucida_Console:h9:cANSI
 elseif has("unix")
@@ -37,9 +39,9 @@ set t_vb=
 
 set cmdheight=2
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 let mapleader=","
@@ -65,6 +67,10 @@ execute pathogen#infect()
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>. :CtrlPTag<cr>
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+
 
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
